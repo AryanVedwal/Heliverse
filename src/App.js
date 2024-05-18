@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SmokeEffect from "./components/SmokeEffect";
+import Home from "./components/Home";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <>
+      <SmokeEffect />
+      <Home />
+
+      <div
+        className="py-5 mt-[20px] text-sm font-medium flex flex-wrap gap-2 items-center justify-around"
+        style={{
+          background: "var(--grad)",
+        }}
+      >
+        <p className="">© 2023 Copywrite. All rights reserved by QodeMatrix</p>
+        <p className="flex items-center justify-center gap-4 *:flex *:cursor-pointer">
+          <span>Documentation</span>
+          <span>Support</span>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </div>
+    </>
   );
 }
-
-export default App;
