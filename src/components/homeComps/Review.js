@@ -1,23 +1,8 @@
-import React, { useRef, useEffect } from "react";
-import gsap from "gsap";
+import React from "react";
 
 export default function Review() {
-  const boxRef = useRef(null);
-
-  useEffect(() => {
-    gsap.fromTo(
-      boxRef.current,
-      { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" },
-      {
-        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-        duration: 0.5,
-        delay: 2.25,
-        ease: "power1.inOut",
-      }
-    );
-  }, []);
   return (
-    <div ref={boxRef}>
+    <div>
       <div className="mb-12 text-center text-xl">
         Trusted by thousands of users around the world
       </div>

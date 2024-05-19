@@ -1,26 +1,8 @@
-import React, { useRef, useEffect } from "react";
-import gsap from "gsap";
+import React from "react";
 
 export default function Hero() {
-  const boxRef = useRef(null);
-
-  useEffect(() => {
-    gsap.fromTo(
-      boxRef.current,
-      { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" },
-      {
-        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-        duration: 1,
-        delay: 1.5,
-        ease: "power1.inOut"
-      }
-    );
-  }, []);
   return (
-    <div
-      ref={boxRef}
-      className="mt-20 flex flex-col lg:flex-row lg:min-h-[60vh] *:flex *:flex-col *:p-4 *:text-center *:lg:text-left"
-    >
+    <div className="mt-20 flex flex-col lg:flex-row lg:min-h-[60vh] *:flex *:flex-col *:p-4 *:text-center *:lg:text-left">
       <div className="lg:w-[20%] w-full gap-2 *:text-2xl">
         <p className="back-clip"> Transform Your Website</p>
         <p>With Motion Art Effect</p>

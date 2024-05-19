@@ -6,6 +6,7 @@ export default function App() {
   return (
     <>
       <SmokeEffect />
+
       <Home />
 
       <div
